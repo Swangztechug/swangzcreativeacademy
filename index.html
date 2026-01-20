@@ -25,6 +25,15 @@
         .vertical-text { writing-mode: vertical-rl; transform: rotate(180deg); }
         .stagger-down { transform: translateY(4rem); }
         @media (max-width: 1024px) { .stagger-down { transform: translateY(0); } }
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+        }
+        .faq-content:not(.hidden) {
+            max-height: 500px;
+            transition: max-height 0.3s ease-in, padding 0.3s ease-in;
+        }
     </style>
 </head>
 <body class="bg-[#0a0a0a]">
@@ -201,14 +210,14 @@
         </div>
         <div class="max-w-4xl mx-auto space-y-4">
             <!-- FAQ 1 -->
-            <div class="bg-[#0a0a0a] border border-[#2a2a2a] rounded-2xl overflow-hidden">
-                <button class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-[#1a1a1a] transition-colors group">
+            <div class="bg-[#0a0a0a] border border-[#2a2a2a] rounded-2xl overflow-hidden faq-item">
+                <button class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-[#1a1a1a] transition-colors group faq-button">
                     <h3 class="text-lg font-bold text-white group-hover:text-[#D4AF37] transition-colors">What is the application process?</h3>
-                    <svg class="w-5 h-5 text-[#D4AF37] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-5 h-5 text-[#D4AF37] flex-shrink-0 faq-icon transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-width="2" d="M19 9l-7 7-7-7"/>
                     </svg>
                 </button>
-                <div class="px-6 pb-5">
+                <div class="faq-content hidden px-6 pb-5">
                     <div class="space-y-2 text-sm text-gray-400">
                         <p class="flex items-start gap-2"><span class="text-[#D4AF37]">1.</span><span>Submit online application form</span></p>
                         <p class="flex items-start gap-2"><span class="text-[#D4AF37]">2.</span><span>Upload portfolio/audition video</span></p>
@@ -219,14 +228,14 @@
             </div>
 
             <!-- FAQ 2 -->
-            <div class="bg-[#0a0a0a] border border-[#2a2a2a] rounded-2xl overflow-hidden">
-                <button class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-[#1a1a1a] transition-colors group">
+            <div class="bg-[#0a0a0a] border border-[#2a2a2a] rounded-2xl overflow-hidden faq-item">
+                <button class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-[#1a1a1a] transition-colors group faq-button">
                     <h3 class="text-lg font-bold text-white group-hover:text-[#D4AF37] transition-colors">What are the tuition fees?</h3>
-                    <svg class="w-5 h-5 text-[#D4AF37] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-5 h-5 text-[#D4AF37] flex-shrink-0 faq-icon transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-width="2" d="M19 9l-7 7-7-7"/>
                     </svg>
                 </button>
-                <div class="px-6 pb-5">
+                <div class="faq-content hidden px-6 pb-5">
                     <div class="space-y-2 text-sm text-gray-400">
                         <p class="flex justify-between"><span>Monthly Tuition:</span><span class="text-[#D4AF37] font-semibold">$249-$329</span></p>
                         <p class="flex justify-between"><span>Registration Fee:</span><span class="text-[#D4AF37] font-semibold">$100</span></p>
@@ -237,14 +246,14 @@
             </div>
 
             <!-- FAQ 3 -->
-            <div class="bg-[#0a0a0a] border border-[#2a2a2a] rounded-2xl overflow-hidden">
-                <button class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-[#1a1a1a] transition-colors group">
+            <div class="bg-[#0a0a0a] border border-[#2a2a2a] rounded-2xl overflow-hidden faq-item">
+                <button class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-[#1a1a1a] transition-colors group faq-button">
                     <h3 class="text-lg font-bold text-white group-hover:text-[#D4AF37] transition-colors">When are the application deadlines?</h3>
-                    <svg class="w-5 h-5 text-[#D4AF37] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-5 h-5 text-[#D4AF37] flex-shrink-0 faq-icon transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-width="2" d="M19 9l-7 7-7-7"/>
                     </svg>
                 </button>
-                <div class="px-6 pb-5">
+                <div class="faq-content hidden px-6 pb-5">
                     <div class="space-y-2 text-sm text-gray-400">
                         <p class="flex justify-between"><span>Fall Intake:</span><span class="text-[#D4AF37] font-semibold">August 15</span></p>
                         <p class="flex justify-between"><span>Spring Intake:</span><span class="text-[#D4AF37] font-semibold">January 10</span></p>
@@ -255,40 +264,40 @@
             </div>
 
             <!-- FAQ 4 -->
-            <div class="bg-[#0a0a0a] border border-[#2a2a2a] rounded-2xl overflow-hidden">
-                <button class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-[#1a1a1a] transition-colors group">
+            <div class="bg-[#0a0a0a] border border-[#2a2a2a] rounded-2xl overflow-hidden faq-item">
+                <button class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-[#1a1a1a] transition-colors group faq-button">
                     <h3 class="text-lg font-bold text-white group-hover:text-[#D4AF37] transition-colors">Do you offer scholarships or financial aid?</h3>
-                    <svg class="w-5 h-5 text-[#D4AF37] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-5 h-5 text-[#D4AF37] flex-shrink-0 faq-icon transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-width="2" d="M19 9l-7 7-7-7"/>
                     </svg>
                 </button>
-                <div class="px-6 pb-5">
+                <div class="faq-content hidden px-6 pb-5">
                     <p class="text-sm text-gray-400">Yes, we offer scholarships and flexible payment plans for eligible students. Please contact our admissions team for more information about available financial assistance options.</p>
                 </div>
             </div>
 
             <!-- FAQ 5 -->
-            <div class="bg-[#0a0a0a] border border-[#2a2a2a] rounded-2xl overflow-hidden">
-                <button class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-[#1a1a1a] transition-colors group">
+            <div class="bg-[#0a0a0a] border border-[#2a2a2a] rounded-2xl overflow-hidden faq-item">
+                <button class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-[#1a1a1a] transition-colors group faq-button">
                     <h3 class="text-lg font-bold text-white group-hover:text-[#D4AF37] transition-colors">What materials do I need for my application?</h3>
-                    <svg class="w-5 h-5 text-[#D4AF37] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-5 h-5 text-[#D4AF37] flex-shrink-0 faq-icon transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-width="2" d="M19 9l-7 7-7-7"/>
                     </svg>
                 </button>
-                <div class="px-6 pb-5">
+                <div class="faq-content hidden px-6 pb-5">
                     <p class="text-sm text-gray-400">You'll need to submit an online application form, a portfolio or audition video showcasing your musical abilities, and any relevant certificates or qualifications. Specific requirements vary by course.</p>
                 </div>
             </div>
 
             <!-- FAQ 6 -->
-            <div class="bg-[#0a0a0a] border border-[#2a2a2a] rounded-2xl overflow-hidden">
-                <button class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-[#1a1a1a] transition-colors group">
+            <div class="bg-[#0a0a0a] border border-[#2a2a2a] rounded-2xl overflow-hidden faq-item">
+                <button class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-[#1a1a1a] transition-colors group faq-button">
                     <h3 class="text-lg font-bold text-white group-hover:text-[#D4AF37] transition-colors">Can I visit the academy before applying?</h3>
-                    <svg class="w-5 h-5 text-[#D4AF37] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-5 h-5 text-[#D4AF37] flex-shrink-0 faq-icon transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-width="2" d="M19 9l-7 7-7-7"/>
                     </svg>
                 </button>
-                <div class="px-6 pb-5">
+                <div class="faq-content hidden px-6 pb-5">
                     <p class="text-sm text-gray-400">Yes! We welcome prospective students to visit our campus. Please contact us to schedule a tour. We're located at 3rd Street, Industrial Area, The Square Building, Level 2, Kampala, Uganda.</p>
                 </div>
             </div>
@@ -563,6 +572,48 @@
             </div>
         </div>
     </footer>
+
+    <!-- FAQ JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqButtons = document.querySelectorAll('.faq-button');
+            
+            faqButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const faqItem = this.closest('.faq-item');
+                    const faqContent = faqItem.querySelector('.faq-content');
+                    const faqIcon = faqItem.querySelector('.faq-icon');
+                    const isOpen = !faqContent.classList.contains('hidden');
+                    
+                    // Close all other FAQs
+                    document.querySelectorAll('.faq-content').forEach(content => {
+                        if (content !== faqContent) {
+                            content.classList.add('hidden');
+                            content.style.maxHeight = null;
+                        }
+                    });
+                    
+                    // Reset all icons
+                    document.querySelectorAll('.faq-icon').forEach(icon => {
+                        if (icon !== faqIcon) {
+                            icon.style.transform = 'rotate(0deg)';
+                        }
+                    });
+                    
+                    // Toggle current FAQ
+                    if (isOpen) {
+                        faqContent.classList.add('hidden');
+                        faqContent.style.maxHeight = null;
+                        faqIcon.style.transform = 'rotate(0deg)';
+                    } else {
+                        faqContent.classList.remove('hidden');
+                        faqContent.style.maxHeight = faqContent.scrollHeight + 'px';
+                        faqIcon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
 
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
