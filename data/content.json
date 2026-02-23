@@ -1,0 +1,193 @@
+{
+  "siteName": "Swangz Creative Academy",
+  "hero": {
+    "headline": "Create.\nPerform.\nExcel.",
+    "subheadline": "Transform your musical passion into a professional career. Learn from industry experts and join a community of talented musicians.",
+    "cards": [
+      {
+        "title": "Music\nProduction",
+        "label": "Music Production",
+        "lessons": "50+",
+        "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800"
+      },
+      {
+        "title": "Vocal\nTraining",
+        "label": "Vocals",
+        "lessons": "40+",
+        "image": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=800"
+      },
+      {
+        "title": "Instrument\nMastery",
+        "label": "Instruments",
+        "lessons": "60+",
+        "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=800"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Get the skills you\nneed for a career\nin music.",
+    "items": [
+      { "title": "Industry Expertise", "description": "Learn from professionals who have worked with top artists and labels." },
+      { "title": "Hands-On Learning", "description": "Practice in professional studios with industry-standard equipment." },
+      { "title": "Career Support", "description": "Get guidance on building your music career and industry connections." }
+    ],
+    "stats": [
+      { "value": "10", "label": "Years\nexperience" },
+      { "value": "250", "label": "Types of\ncourses" }
+    ],
+    "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1000"
+  },
+  "team": {
+    "badge": "Our Team",
+    "title": "Our Leadership Team",
+    "subtitle": "Learn from industry professionals and accomplished musicians who are passionate about sharing their expertise.",
+    "members": [
+      { "name": "Kawser Ahmed", "role": "Music Director", "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800" },
+      { "name": "Karniz Fatema", "role": "Vocal Coach", "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" },
+      { "name": "Alex Pronto", "role": "Music Producer", "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=800" }
+    ]
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about applying to Swangz Creative Academy",
+    "cta": "Apply Now",
+    "items": [
+      {
+        "question": "What is the application process?",
+        "answer": "1. Submit online application form\n2. Upload portfolio/audition video\n3. Interview with admissions team\n4. Receive admission decision"
+      },
+      {
+        "question": "What are the tuition fees?",
+        "answer": "Monthly Tuition: $249-$329\nRegistration Fee: $100\nMaterials Fee: $50/month\n*Scholarships and payment plans available"
+      },
+      {
+        "question": "When are the application deadlines?",
+        "answer": "Fall Intake: August 15\nSpring Intake: January 10\nApplication Deadline: 2 weeks prior to intake\n*Early applications receive priority"
+      },
+      {
+        "question": "Do you offer scholarships or financial aid?",
+        "answer": "Yes, we offer scholarships and flexible payment plans for eligible students. Please contact our admissions team for more information about available financial assistance options."
+      },
+      {
+        "question": "What materials do I need for my application?",
+        "answer": "You'll need to submit an online application form, a portfolio or audition video showcasing your musical abilities, and any relevant certificates or qualifications. Specific requirements vary by course."
+      },
+      {
+        "question": "Can I visit the academy before applying?",
+        "answer": "Yes! We welcome prospective students to visit our campus. Please contact us to schedule a tour. We're located at 3rd Street, Industrial Area, The Square Building, Level 2, Kampala, Uganda."
+      }
+    ]
+  },
+  "careers": {
+    "title": "Career Paths in Music",
+    "subtitle": "Discover the diverse career opportunities available to graduates of our programs.",
+    "items": [
+      { "title": "Music Producer", "description": "Create and produce music for artists, films, and commercial projects. Work in studios or independently.", "salary": "Average Salary: $50k - $150k+" },
+      { "title": "Sound Engineer", "description": "Mix and master audio recordings, work in live sound, or specialize in post-production for media.", "salary": "Average Salary: $40k - $120k+" },
+      { "title": "Performing Artist", "description": "Pursue a career as a solo artist, band member, or session musician. Perform live and record albums.", "salary": "Average Salary: $30k - $200k+" },
+      { "title": "Music Teacher", "description": "Educate the next generation of musicians in schools, private studios, or online platforms.", "salary": "Average Salary: $35k - $80k+" },
+      { "title": "Music Composer", "description": "Write original music for films, TV shows, video games, and commercial advertising.", "salary": "Average Salary: $45k - $150k+" },
+      { "title": "Music Director", "description": "Lead musical productions, conduct orchestras, or direct music programs for organizations.", "salary": "Average Salary: $50k - $100k+" }
+    ]
+  },
+  "testimonials": {
+    "title": "What Our Students Say",
+    "items": [
+      { "quote": "The vocal training program transformed my confidence. I went from being afraid to sing in public to performing at local venues. The instructors are incredibly supportive and professional.", "author": "Jessica Martinez", "role": "Vocal Performance Graduate", "image": "https://i.pravatar.cc/150?u=1" },
+      { "quote": "After completing the music production course, I landed my first job at a recording studio. The hands-on experience and industry connections I gained were invaluable.", "author": "Michael Thompson", "role": "Music Producer", "image": "https://i.pravatar.cc/150?u=2" },
+      { "quote": "The guitar mastery program exceeded my expectations. The personalized feedback and structured curriculum helped me progress faster than I ever imagined possible.", "author": "Alex Chen", "role": "Professional Musician", "image": "https://i.pravatar.cc/150?u=3" },
+      { "quote": "SCA gave me the skills and confidence to start my own music production business. The career support and alumni network continue to help me grow professionally.", "author": "Sarah Johnson", "role": "Studio Owner", "image": "https://i.pravatar.cc/150?u=4" }
+    ]
+  },
+  "blog": {
+    "title": "Academy Blog",
+    "subtitle": "Stay updated with the latest trends, tips, and insights for creatives in the music industry.",
+    "cta": "View All Blog Posts",
+    "posts": [
+      { "title": "5 Essential Plugins Every Music Producer Needs in 2024", "excerpt": "Discover the must-have plugins that will elevate your music production workflow and sound quality.", "category": "Music Production", "date": "March 15, 2024", "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&q=80&w=800" },
+      { "title": "Building Your Music Career: Networking Strategies That Work", "excerpt": "Learn how to build meaningful connections in the music industry and advance your career.", "category": "Career Tips", "date": "March 10, 2024", "image": "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?auto=format&fit=crop&q=80&w=800" },
+      { "title": "AI in Music: How Technology is Shaping Creative Industries", "excerpt": "Explore the latest AI tools and technologies revolutionizing music creation and production.", "category": "Technology", "date": "March 5, 2024", "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=800" }
+    ]
+  },
+  "courses": {
+    "title": "Our Courses",
+    "subtitle": "Explore our comprehensive range of music courses designed to help you master your craft and advance your career in the music industry.",
+    "categories": ["All Courses", "Music Production", "Vocal Training", "Instruments", "Music Theory", "Sound Engineering"],
+    "items": [
+      { "title": "Music Production Mastery", "description": "Learn professional music production techniques, DAW mastery, and industry-standard workflows.", "category": "Music Production", "duration": "6 months", "price": "$299/month", "lessons": "50+ Lessons", "badge": "Certificate Included", "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&q=80&w=800" },
+      { "title": "Vocal Performance Excellence", "description": "Master vocal techniques, breathing exercises, and stage presence for professional performances.", "category": "Vocal Training", "duration": "4 months", "price": "$249/month", "lessons": "40+ Lessons", "badge": "1-on-1 Sessions", "image": "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?auto=format&fit=crop&q=80&w=800" },
+      { "title": "Guitar Mastery Program", "description": "From beginner to advanced guitar techniques, covering acoustic, electric, and classical styles.", "category": "Instruments", "duration": "5 months", "price": "$279/month", "lessons": "60+ Lessons", "badge": "Certificate Included", "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=800" }
+    ]
+  },
+  "tutors": {
+    "title": "Meet the Tutors",
+    "subtitle": "Learn from industry professionals and accomplished musicians who are passionate about sharing their expertise and helping you achieve your musical goals.",
+    "items": [
+      { "name": "Kawser Ahmed", "role": "Music Director", "bio": "Industry veteran with decades of experience in music direction and education.", "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800", "courses": ["Music Direction", "Orchestration"], "badges": ["Expert", "20+ Years"] },
+      { "name": "Karniz Fatema", "role": "Vocal Coach", "bio": "15+ years experience. Grammy-nominated artist with multiple chart-topping hits.", "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800", "courses": ["Vocal Performance", "Stage Presence", "Breathing Techniques"], "badges": ["Expert", "15+ Years"] },
+      { "name": "Alex Pronto", "role": "Music Producer", "bio": "Producer for top-charting artists. Studio owner with 20+ years in the industry.", "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=800", "courses": ["Music Production", "Sound Design", "DAW Mastery"], "badges": ["Expert", "20+ Years"] }
+    ]
+  },
+  "about": {
+    "title": "About Swangz Creative Academy",
+    "subtitle": "A premier music education institution dedicated to nurturing the next generation of musical talent through comprehensive, accessible, and high-quality education.",
+    "intro": "Swangz Creative Academy is a premier music education institution dedicated to nurturing the next generation of musical talent. We combine traditional music education with modern technology and industry insights.",
+    "mission": "Our mission is to provide comprehensive, accessible, and high-quality music education that empowers students to pursue their passion and build successful careers in the music industry.",
+    "statsHeading": "Why Choose SCA?",
+    "highlights": [
+      { "title": "Industry-Experienced Instructors", "description": "Learn from professionals who have worked with top artists and labels." },
+      { "title": "State-of-the-Art Facilities", "description": "Access professional recording studios and practice rooms." },
+      { "title": "Career Support", "description": "Get guidance on building your music career and industry connections." }
+    ],
+    "stats": [
+      { "label": "Success Rate", "value": "92%" },
+      { "label": "Student Satisfaction", "value": "98%" },
+      { "label": "Industry Placement", "value": "85%" }
+    ],
+    "values": [
+      { "title": "Excellence", "description": "We maintain the highest standards in music education and student outcomes." },
+      { "title": "Community", "description": "Building a supportive network of musicians, instructors, and industry professionals." },
+      { "title": "Innovation", "description": "Embracing new technologies and teaching methods to stay ahead of industry trends." }
+    ]
+  },
+  "contactPage": {
+    "title": "Contact Us",
+    "subtitle": "Send us a message and we'll get back to you as soon as we can."
+  },
+  "applyPage": {
+    "title": "Apply for a course",
+    "subtitle": "Fill in your details and the course you want to join. We'll get back to you with next steps."
+  },
+  "footer": {
+    "tagline": "Swangz Creative Academy is a premier music education institution dedicated to nurturing the next generation of musical talent. Learn from industry experts and join a community of talented musicians.",
+    "quickLinks": [
+      { "label": "Courses", "href": "/courses" },
+      { "label": "Meet Tutors", "href": "/tutors" },
+      { "label": "About Us", "href": "/about" },
+      { "label": "Careers", "href": "/careers" },
+      { "label": "Blog", "href": "/blog" }
+    ],
+    "resources": [
+      { "label": "Blog", "href": "/blog" },
+      { "label": "Help Center", "href": "#" },
+      { "label": "Career Guide", "href": "#" },
+      { "label": "Success Stories", "href": "#" },
+      { "label": "FAQs", "href": "#faqs" }
+    ],
+    "newsletterTitle": "Newsletter",
+    "newsletterSubtext": "Subscribe to get updates on new courses and exclusive offers.",
+    "contact": {
+      "salesEmail": "gloria.nabweteme@swangzavenue.com",
+      "productionEmail": "alex.ssuuna@swangzavenue.com",
+      "salesPhone": "+256 700 625120",
+      "productionPhone": "+256 705 112905",
+      "address": ["3rd Street, Industrial Area", "The Square Building, Level 2", "Kampala, Uganda"]
+    },
+    "copyright": "© 2024 Swangz Creative Academy. All rights reserved",
+    "legal": [
+      { "label": "Privacy Policy", "href": "#" },
+      { "label": "Terms of Service", "href": "#" },
+      { "label": "Cookie Policy", "href": "#" }
+    ]
+  }
+}
