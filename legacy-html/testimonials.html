@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testimonials — Swang Creative Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "system-ui", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @media (prefers-reduced-motion: no-preference) {
+        .reveal {
+          opacity: 0;
+          transform: translateY(14px);
+          transition: opacity 700ms cubic-bezier(0.2, 0.8, 0.2, 1),
+            transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1);
+          will-change: opacity, transform;
+        }
+        .reveal.reveal--visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .float-in {
+          opacity: 0;
+          transform: translateY(10px);
+          animation: floatIn 850ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+        @keyframes floatIn {
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-white font-sans text-zinc-900 antialiased">
+    <!-- Header / Hero -->
+    <header
+      class="relative bg-zinc-900 bg-cover bg-center"
+      style="
+        background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.42) 0%,
+            rgba(0, 0, 0, 0.62) 100%
+          ),
+          url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=2400&q=80');
+      "
+    >
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-12">
+        <div class="flex items-center justify-between gap-4">
+          <a
+            href="index.html"
+            class="flex h-10 w-10 items-center justify-center rounded-full border border-white/30 bg-white/10 text-lg font-bold text-white backdrop-blur-sm"
+          >
+            S
+          </a>
+
+          <nav
+            class="hidden md:flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-2 py-1.5 backdrop-blur-md"
+          >
+            <a href="index.html" class="rounded-full px-4 py-2 text-sm font-medium text-white/90 hover:bg-white/10">Home</a>
+            <a href="courses.html" class="rounded-full px-4 py-2 text-sm font-medium text-white/90 hover:bg-white/10">Programs</a>
+            <a href="blog.html" class="rounded-full px-4 py-2 text-sm font-medium text-white/90 hover:bg-white/10">Blog</a>
+            <a href="testimonials.html" class="rounded-full bg-white px-4 py-2 text-sm font-medium text-zinc-900 shadow-sm">Testimonials</a>
+            <a href="gallery.html" class="rounded-full px-4 py-2 text-sm font-medium text-white/90 hover:bg-white/10">Gallery</a>
+            <a href="contact.html" class="rounded-full px-4 py-2 text-sm font-medium text-white/90 hover:bg-white/10">Contact</a>
+          </nav>
+
+            <button
+              type="button"
+              id="nav-toggle"
+              class="md:hidden inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white backdrop-blur-sm hover:bg-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+              aria-controls="mobile-nav"
+              aria-expanded="false"
+              aria-label="Open menu"
+            >
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+        </div>
+
+        <div id="mobile-nav" class="md:hidden hidden border-t border-white/10 mt-4 pt-4">
+          <nav class="flex flex-col gap-1.5" aria-label="Primary">
+            <a href="index.html" class="w-full rounded-full border border-white/25 bg-white/10 px-4 py-3 text-sm font-medium text-white/95 backdrop-blur-sm text-center hover:bg-white/15">Home</a>
+            <a href="courses.html" class="w-full rounded-full border border-white/25 bg-white/10 px-4 py-3 text-sm font-medium text-white/95 backdrop-blur-sm text-center hover:bg-white/15">Programs</a>
+            <a href="blog.html" class="w-full rounded-full border border-white/25 bg-white/10 px-4 py-3 text-sm font-medium text-white/95 backdrop-blur-sm text-center hover:bg-white/15">Blog</a>
+            <a href="testimonials.html" class="w-full rounded-full bg-white px-4 py-3 text-sm font-medium text-zinc-900 text-center shadow-sm">Testimonials</a>
+            <a href="gallery.html" class="w-full rounded-full border border-white/25 bg-white/10 px-4 py-3 text-sm font-medium text-white/95 backdrop-blur-sm text-center hover:bg-white/15">Gallery</a>
+            <a href="contact.html" class="w-full rounded-full border border-white/25 bg-white/10 px-4 py-3 text-sm font-medium text-white/95 backdrop-blur-sm text-center hover:bg-white/15">Contact</a>
+          </nav>
+        </div>
+
+        <div class="mt-12 max-w-2xl">
+          <p class="text-xs font-semibold uppercase tracking-widest text-white/70 float-in" style="animation-delay: 60ms">
+            Testimonials
+          </p>
+          <h1 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.1] float-in" style="animation-delay: 120ms">
+            Creatives who shipped, refined, and leveled up
+          </h1>
+          <p class="mt-4 max-w-xl text-base sm:text-lg text-white/85 leading-relaxed float-in" style="animation-delay: 180ms">
+            Real results from projects, critique, and consistent practice.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main class="py-20 sm:py-28 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <section class="bg-slate-50 rounded-3xl p-8 sm:p-12 reveal" data-reveal>
+          <p class="text-xs font-semibold uppercase tracking-widest text-zinc-500 text-center">Featured</p>
+          <blockquote class="mx-auto mt-8 max-w-4xl text-center">
+            <p class="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-zinc-900 leading-snug">
+              The structure made all the difference. I stopped “watching tutorials” and started building—week after week.
+              <span class="block mt-4 text-xl sm:text-2xl lg:text-3xl font-semibold text-zinc-400">
+                I landed interviews within a month of finishing.
+              </span>
+            </p>
+          </blockquote>
+
+          <div class="mt-12 flex items-center justify-center gap-4 sm:gap-6">
+            <div class="h-14 w-14 sm:h-16 sm:w-16 overflow-hidden rounded-2xl grayscale opacity-70">
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
+                alt=""
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="h-20 w-20 sm:h-24 sm:w-24 overflow-hidden rounded-2xl ring-4 ring-white shadow-lg">
+                <img
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80"
+                  alt=""
+                  class="h-full w-full object-cover"
+                />
+              </div>
+              <p class="mt-4 text-sm font-semibold text-zinc-900">Sarah Mitchell</p>
+              <p class="text-xs text-zinc-500">Product Designer, Berlin</p>
+            </div>
+            <div class="h-14 w-14 sm:h-16 sm:w-16 overflow-hidden rounded-2xl grayscale opacity-70">
+              <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80"
+                alt=""
+                class="h-full w-full object-cover"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="mt-12 sm:mt-14 reveal" data-reveal>
+          <div class="grid gap-6 sm:grid-cols-3">
+            <div class="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm">
+              <p class="text-xs font-semibold uppercase tracking-widest text-zinc-500">Momentum</p>
+              <p class="mt-3 text-3xl font-bold tracking-tight text-zinc-900">+4</p>
+              <p class="mt-2 text-sm text-zinc-600">Projects shipped on average per program.</p>
+            </div>
+            <div class="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm">
+              <p class="text-xs font-semibold uppercase tracking-widest text-zinc-500">Clarity</p>
+              <p class="mt-3 text-3xl font-bold tracking-tight text-zinc-900">Weekly</p>
+              <p class="mt-2 text-sm text-zinc-600">Critique sessions + next-step guidance.</p>
+            </div>
+            <div class="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm">
+              <p class="text-xs font-semibold uppercase tracking-widest text-zinc-500">Confidence</p>
+              <p class="mt-3 text-3xl font-bold tracking-tight text-zinc-900">Stronger</p>
+              <p class="mt-2 text-sm text-zinc-600">Case studies that tell the story behind the work.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="mt-16 sm:mt-20 grid gap-6 md:grid-cols-3 reveal" data-reveal>
+          <article class="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm">
+            <p class="text-sm font-semibold text-zinc-900">“Clear milestones.”</p>
+            <p class="mt-3 text-sm text-zinc-600 leading-relaxed">
+              I always struggled with what to do next. The roadmap and weekly check-ins kept me moving.
+            </p>
+            <div class="mt-6 flex items-center gap-3">
+              <div class="h-10 w-10 overflow-hidden rounded-2xl">
+                <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?auto=format&fit=crop&w=160&q=80" alt="" class="h-full w-full object-cover" />
+              </div>
+              <div>
+                <p class="text-sm font-semibold text-zinc-900">Amir K.</p>
+                <p class="text-xs text-zinc-500">Brand &amp; Identity</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm">
+            <p class="text-sm font-semibold text-zinc-900">“Feedback that matters.”</p>
+            <p class="mt-3 text-sm text-zinc-600 leading-relaxed">
+              Mentors didn’t just say “good job”—they pointed out what to improve and how.
+            </p>
+            <div class="mt-6 flex items-center gap-3">
+              <div class="h-10 w-10 overflow-hidden rounded-2xl">
+                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=160&q=80" alt="" class="h-full w-full object-cover" />
+              </div>
+              <div>
+                <p class="text-sm font-semibold text-zinc-900">Lina S.</p>
+                <p class="text-xs text-zinc-500">Motion &amp; Animation</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm">
+            <p class="text-sm font-semibold text-zinc-900">“Finally consistent.”</p>
+            <p class="mt-3 text-sm text-zinc-600 leading-relaxed">
+              The studio energy and simple daily targets helped me build a real habit.
+            </p>
+            <div class="mt-6 flex items-center gap-3">
+              <div class="h-10 w-10 overflow-hidden rounded-2xl">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&q=80" alt="" class="h-full w-full object-cover" />
+              </div>
+              <div>
+                <p class="text-sm font-semibold text-zinc-900">Noah P.</p>
+                <p class="text-xs text-zinc-500">Photo &amp; Storytelling</p>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="mt-16 sm:mt-20 reveal" data-reveal>
+          <div class="grid gap-6 md:grid-cols-2">
+            <article class="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm">
+              <p class="text-sm font-semibold text-zinc-900">“My portfolio finally looks coherent.”</p>
+              <p class="mt-3 text-sm text-zinc-600 leading-relaxed">
+                I learned to edit my own work, write a clear case study, and present the final visuals with confidence.
+              </p>
+              <div class="mt-6 flex items-center gap-3">
+                <div class="h-10 w-10 overflow-hidden rounded-2xl">
+                  <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=160&q=80" alt="" class="h-full w-full object-cover" />
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-zinc-900">Jordan R.</p>
+                  <p class="text-xs text-zinc-500">Brand &amp; Identity</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm">
+              <p class="text-sm font-semibold text-zinc-900">“The critique made me faster.”</p>
+              <p class="mt-3 text-sm text-zinc-600 leading-relaxed">
+                Instead of wandering, I got one clear improvement each week. The results stacked quickly.
+              </p>
+              <div class="mt-6 flex items-center gap-3">
+                <div class="h-10 w-10 overflow-hidden rounded-2xl">
+                  <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=160&q=80" alt="" class="h-full w-full object-cover" />
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-zinc-900">Priya D.</p>
+                  <p class="text-xs text-zinc-500">Motion &amp; Animation</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="mt-16 sm:mt-20 reveal" data-reveal>
+          <div class="rounded-3xl bg-zinc-900 p-8 sm:p-12 text-white flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+            <div class="max-w-2xl">
+              <p class="text-xs font-semibold uppercase tracking-widest text-white/70">Next step</p>
+              <h3 class="mt-3 text-2xl sm:text-3xl font-bold tracking-tight">Get a personalized course plan</h3>
+              <p class="mt-3 text-white/80 leading-relaxed">
+                Tell us your goal and timeline—get a recommended track and weekly plan.
+              </p>
+            </div>
+            <a href="contact.html" class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-zinc-900 hover:bg-zinc-100">
+              Contact admissions
+            </a>
+          </div>
+        </section>
+
+        <section class="mt-16 sm:mt-20 grid gap-6 lg:grid-cols-2 reveal" data-reveal>
+          <div class="rounded-3xl bg-slate-50 p-8 sm:p-10">
+            <p class="text-xs font-semibold uppercase tracking-widest text-zinc-500">What you get</p>
+            <h3 class="mt-3 text-2xl sm:text-3xl font-bold tracking-tight text-zinc-900">A studio structure that keeps you shipping</h3>
+            <ul class="mt-6 space-y-3 text-sm text-zinc-600 list-disc list-inside">
+              <li>Weekly critique + actionable next steps</li>
+              <li>Project milestones that build into a portfolio piece</li>
+              <li>Templates for case studies and presentation</li>
+              <li>Community accountability and progress check-ins</li>
+            </ul>
+            <a href="courses.html" class="mt-8 inline-flex items-center gap-2 rounded-full bg-zinc-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-zinc-800">
+              Browse programs
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+          <div class="rounded-3xl border border-zinc-200 bg-white p-8 sm:p-10 shadow-sm">
+            <p class="text-xs font-semibold uppercase tracking-widest text-zinc-500">FAQ</p>
+            <h3 class="mt-3 text-2xl sm:text-3xl font-bold tracking-tight text-zinc-900">Before you apply</h3>
+            <div class="mt-8 space-y-4">
+              <details class="group rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+                  <span class="font-semibold text-zinc-900">Is this self-paced?</span>
+                  <span class="text-zinc-500 group-open:rotate-180 transition">▾</span>
+                </summary>
+                <p class="mt-4 text-sm text-zinc-600">You set your hours, but the program has weekly milestones and critique windows.</p>
+              </details>
+              <details class="group rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+                  <span class="font-semibold text-zinc-900">Will I have something to show after?</span>
+                  <span class="text-zinc-500 group-open:rotate-180 transition">▾</span>
+                </summary>
+                <p class="mt-4 text-sm text-zinc-600">Yes—each program ends with a polished piece and a case-study structure.</p>
+              </details>
+              <details class="group rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+                  <span class="font-semibold text-zinc-900">Can you help me choose a track?</span>
+                  <span class="text-zinc-500 group-open:rotate-180 transition">▾</span>
+                </summary>
+                <p class="mt-4 text-sm text-zinc-600">Yes—send your goals and we’ll recommend the best fit.</p>
+              </details>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="bg-black text-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div class="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between reveal" data-reveal>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight max-w-2xl">
+            Join the next studio and build with clarity.
+          </h2>
+          <a
+            href="courses.html"
+            class="inline-flex shrink-0 items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-zinc-900 hover:bg-zinc-100"
+            >Browse programs</a
+          >
+        </div>
+
+        <div class="mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-3 border-t border-white/10 pt-16 reveal" data-reveal>
+          <div>
+            <h3 class="text-sm font-semibold text-white">Academy</h3>
+            <ul class="mt-4 space-y-3 text-sm text-zinc-400">
+              <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+              <li><a href="courses.html" class="hover:text-white transition">Programs</a></li>
+              <li><a href="blog.html" class="hover:text-white transition">Blog</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-white">Support</h3>
+            <ul class="mt-4 space-y-3 text-sm text-zinc-400">
+              <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+              <li><a href="contact.html" class="hover:text-white transition">Help center</a></li>
+              <li><a href="contact.html" class="hover:text-white transition">Terms &amp; privacy</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-white">Follow</h3>
+            <ul class="mt-4 space-y-3 text-sm text-zinc-400">
+              <li><a href="https://instagram.com" class="hover:text-white transition" target="_blank" rel="noreferrer">Instagram</a></li>
+              <li><a href="https://x.com" class="hover:text-white transition" target="_blank" rel="noreferrer">Twitter</a></li>
+              <li><a href="https://youtube.com" class="hover:text-white transition" target="_blank" rel="noreferrer">YouTube</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-16 flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between border-t border-white/10 pt-10 reveal" data-reveal>
+          <a href="index.html" class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-lg font-bold text-white">
+            S
+          </a>
+
+          <div class="hidden lg:block"></div>
+
+          <div class="flex items-center justify-center lg:justify-end gap-2">
+            <a href="https://instagram.com" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-zinc-200 hover:bg-white/10 transition" aria-label="Instagram" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-instagram text-[18px]" aria-hidden="true"></i>
+            </a>
+            <a href="https://x.com" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-zinc-200 hover:bg-white/10 transition" aria-label="Twitter" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-x-twitter text-[18px]" aria-hidden="true"></i>
+            </a>
+            <a href="https://youtube.com" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-zinc-200 hover:bg-white/10 transition" aria-label="YouTube" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-youtube text-[18px]" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <p class="mt-10 text-center text-xs text-zinc-500">
+          © <span id="y"></span> Swang Creative Academy. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (!prefersReducedMotion) {
+        const els = document.querySelectorAll("[data-reveal]");
+        const io = new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("reveal--visible");
+                io.unobserve(entry.target);
+              }
+            }
+          },
+          { threshold: 0.12 }
+        );
+        els.forEach((el) => io.observe(el));
+      } else {
+        document.querySelectorAll(".reveal").forEach((el) => el.classList.add("reveal--visible"));
+      }
+      (function () {
+        var btn = document.getElementById("nav-toggle");
+        var menu = document.getElementById("mobile-nav");
+        if (!btn || !menu) return;
+        function setOpen(open) {
+          menu.classList.toggle("hidden", !open);
+          btn.setAttribute("aria-expanded", open ? "true" : "false");
+          btn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        }
+        btn.addEventListener("click", function () {
+          setOpen(menu.classList.contains("hidden"));
+        });
+        menu.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            setOpen(false);
+          });
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && !menu.classList.contains("hidden")) setOpen(false);
+        });
+      })();
+    </script>
+  </body>
+</html>

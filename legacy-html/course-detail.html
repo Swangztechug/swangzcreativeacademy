@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Program — Brand &amp; Identity Design | Swang Creative Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "system-ui", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @media (prefers-reduced-motion: no-preference) {
+        .reveal {
+          opacity: 0;
+          transform: translateY(14px);
+          transition: opacity 700ms cubic-bezier(0.2, 0.8, 0.2, 1),
+            transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1);
+          will-change: opacity, transform;
+        }
+        .reveal.reveal--visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .float-in {
+          opacity: 0;
+          transform: translateY(10px);
+          animation: floatIn 850ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+        @keyframes floatIn {
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-white font-sans text-zinc-900 antialiased">
+    <!-- Header / Hero -->
+    <header
+      class="relative bg-zinc-900 bg-cover bg-center"
+      style="
+        background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.42) 0%,
+            rgba(0, 0, 0, 0.66) 100%
+          ),
+          url('https://images.unsplash.com/photo-1526481280695-3c687fd5432c?auto=format&fit=crop&w=2400&q=80');
+      "
+    >
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-12">
+        <div class="flex items-center justify-between gap-4">
+          <a
+            href="index.html"
+            class="flex h-10 w-10 items-center justify-center rounded-full border border-white/30 bg-white/10 text-lg font-bold text-white backdrop-blur-sm"
+          >
+            S
+          </a>
+
+          <nav
+            class="hidden md:flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-2 py-1.5 backdrop-blur-md"
+          >
+            <a href="index.html" class="rounded-full px-4 py-2 text-sm font-medium text-white/90 hover:bg-white/10">Home</a>
+            <a href="courses.html" class="rounded-full bg-white px-4 py-2 text-sm font-medium text-zinc-900 shadow-sm">Programs</a>
+            <a href="blog.html" class="rounded-full px-4 py-2 text-sm font-medium text-white/90 hover:bg-white/10">Blog</a>
+            <a href="testimonials.html" class="rounded-full px-4 py-2 text-sm font-medium text-white/90 hover:bg-white/10">Testimonials</a>
+            <a href="gallery.html" class="rounded-full px-4 py-2 text-sm font-medium text-white/90 hover:bg-white/10">Gallery</a>
+            <a href="contact.html" class="rounded-full px-4 py-2 text-sm font-medium text-white/90 hover:bg-white/10">Contact</a>
+          </nav>
+
+            <button
+              type="button"
+              id="nav-toggle"
+              class="md:hidden inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white backdrop-blur-sm hover:bg-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+              aria-controls="mobile-nav"
+              aria-expanded="false"
+              aria-label="Open menu"
+            >
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+        </div>
+
+        <div id="mobile-nav" class="md:hidden hidden border-t border-white/10 mt-4 pt-4">
+          <nav class="flex flex-col gap-1.5" aria-label="Primary">
+            <a href="index.html" class="w-full rounded-full border border-white/25 bg-white/10 px-4 py-3 text-sm font-medium text-white/95 backdrop-blur-sm text-center hover:bg-white/15">Home</a>
+            <a href="courses.html" class="w-full rounded-full bg-white px-4 py-3 text-sm font-medium text-zinc-900 text-center shadow-sm">Programs</a>
+            <a href="blog.html" class="w-full rounded-full border border-white/25 bg-white/10 px-4 py-3 text-sm font-medium text-white/95 backdrop-blur-sm text-center hover:bg-white/15">Blog</a>
+            <a href="testimonials.html" class="w-full rounded-full border border-white/25 bg-white/10 px-4 py-3 text-sm font-medium text-white/95 backdrop-blur-sm text-center hover:bg-white/15">Testimonials</a>
+            <a href="gallery.html" class="w-full rounded-full border border-white/25 bg-white/10 px-4 py-3 text-sm font-medium text-white/95 backdrop-blur-sm text-center hover:bg-white/15">Gallery</a>
+            <a href="contact.html" class="w-full rounded-full border border-white/25 bg-white/10 px-4 py-3 text-sm font-medium text-white/95 backdrop-blur-sm text-center hover:bg-white/15">Contact</a>
+          </nav>
+        </div>
+
+        <div class="mt-10 max-w-3xl">
+          <p class="text-xs font-semibold uppercase tracking-widest text-white/70 float-in" style="animation-delay: 60ms">
+            Program · 6 weeks · Project-based
+          </p>
+          <h1 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.1] float-in" style="animation-delay: 120ms">
+            Brand &amp; Identity Design
+          </h1>
+          <p class="mt-4 max-w-2xl text-base sm:text-lg text-white/85 leading-relaxed float-in" style="animation-delay: 180ms">
+            Build a complete identity system—logo, typography, color, layout rules, and real-world applications—guided by critique and weekly milestones.
+          </p>
+
+          <div class="mt-8 flex flex-col sm:flex-row sm:items-center gap-3 float-in" style="animation-delay: 240ms">
+            <a
+              href="apply.html?program=brand-identity"
+              class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-zinc-900 hover:bg-zinc-100"
+            >
+              Apply now
+            </a>
+            <a
+              href="#syllabus"
+              class="inline-flex items-center justify-center rounded-full border border-white/25 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm hover:bg-white/15"
+            >
+              View syllabus
+            </a>
+            <span class="text-sm text-white/80">From <span class="font-semibold text-white">$249</span> · Limited seats</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="py-20 sm:py-28 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Quick facts -->
+        <section class="grid gap-6 md:grid-cols-3 reveal" data-reveal>
+          <div class="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm">
+            <p class="text-xs font-semibold uppercase tracking-widest text-zinc-500">Format</p>
+            <p class="mt-3 text-lg font-bold text-zinc-900">Studio sessions</p>
+            <p class="mt-2 text-sm text-zinc-600">Weekly live critique + guided work blocks you can repeat.</p>
+          </div>
+          <div class="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm">
+            <p class="text-xs font-semibold uppercase tracking-widest text-zinc-500">Outcome</p>
+            <p class="mt-3 text-lg font-bold text-zinc-900">A full identity system</p>
+            <p class="mt-2 text-sm text-zinc-600">Logo suite, type scale, color system, grid rules, and mockups.</p>
+          </div>
+          <div class="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm">
+            <p class="text-xs font-semibold uppercase tracking-widest text-zinc-500">Level</p>
+            <p class="mt-3 text-lg font-bold text-zinc-900">Beginner → intermediate</p>
+            <p class="mt-2 text-sm text-zinc-600">Ideal if you can use basic design tools and want stronger systems.</p>
+          </div>
+        </section>
+
+        <!-- Syllabus + sidebar CTA -->
+        <section id="syllabus" class="mt-16 sm:mt-20 grid gap-10 lg:grid-cols-12 reveal" data-reveal>
+          <div class="lg:col-span-7">
+            <p class="text-xs font-semibold uppercase tracking-widest text-zinc-500">Syllabus</p>
+            <h2 class="mt-3 text-3xl sm:text-4xl font-bold tracking-tight text-zinc-900">What you’ll build</h2>
+            <p class="mt-4 text-zinc-600 leading-relaxed">
+              You’ll go from strategy to a polished identity system with applications that look ready for a real client.
+            </p>
+
+            <div class="mt-10 space-y-4">
+              <details class="group rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm" open>
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+                  <span class="font-semibold text-zinc-900">Week 1 · Brand strategy &amp; references</span>
+                  <span class="text-zinc-500 group-open:rotate-180 transition">▾</span>
+                </summary>
+                <ul class="mt-4 space-y-2 text-sm text-zinc-600">
+                  <li>Define audience, tone, constraints, and visual territory.</li>
+                  <li>Build a reference library and a direction board.</li>
+                </ul>
+              </details>
+              <details class="group rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+                  <span class="font-semibold text-zinc-900">Week 2 · Logo exploration</span>
+                  <span class="text-zinc-500 group-open:rotate-180 transition">▾</span>
+                </summary>
+                <ul class="mt-4 space-y-2 text-sm text-zinc-600">
+                  <li>Sketching, mark vs wordmark, and iteration strategy.</li>
+                  <li>Create a logo suite (primary, secondary, icon).</li>
+                </ul>
+              </details>
+              <details class="group rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+                  <span class="font-semibold text-zinc-900">Week 3 · Typography &amp; hierarchy</span>
+                  <span class="text-zinc-500 group-open:rotate-180 transition">▾</span>
+                </summary>
+                <ul class="mt-4 space-y-2 text-sm text-zinc-600">
+                  <li>Type pairing, scale, and layout rhythm.</li>
+                  <li>Build a simple type system you can reuse.</li>
+                </ul>
+              </details>
+              <details class="group rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+                  <span class="font-semibold text-zinc-900">Week 4 · Color &amp; components</span>
+                  <span class="text-zinc-500 group-open:rotate-180 transition">▾</span>
+                </summary>
+                <ul class="mt-4 space-y-2 text-sm text-zinc-600">
+                  <li>Color system, accessibility basics, and components.</li>
+                  <li>Patterns, textures, and supporting graphics.</li>
+                </ul>
+              </details>
+              <details class="group rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+                  <span class="font-semibold text-zinc-900">Week 5 · Applications</span>
+                  <span class="text-zinc-500 group-open:rotate-180 transition">▾</span>
+                </summary>
+                <ul class="mt-4 space-y-2 text-sm text-zinc-600">
+                  <li>Design 3–5 realistic touchpoints (social, packaging, web, print).</li>
+                  <li>Create mockups that tell a cohesive story.</li>
+                </ul>
+              </details>
+              <details class="group rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+                  <span class="font-semibold text-zinc-900">Week 6 · Case study &amp; presentation</span>
+                  <span class="text-zinc-500 group-open:rotate-180 transition">▾</span>
+                </summary>
+                <ul class="mt-4 space-y-2 text-sm text-zinc-600">
+                  <li>Write your narrative and curate the work.</li>
+                  <li>Final presentation + critique and polish.</li>
+                </ul>
+              </details>
+            </div>
+          </div>
+
+          <aside class="lg:col-span-5 lg:pl-2">
+            <div class="rounded-3xl bg-slate-50 p-6 sm:p-8">
+              <h3 class="text-lg font-bold text-zinc-900">Instructor</h3>
+              <p class="mt-2 text-sm text-zinc-600">
+                Learn from a working brand designer with a critique-first approach.
+              </p>
+
+              <div class="mt-6 flex items-center gap-4">
+                <div class="h-14 w-14 overflow-hidden rounded-2xl ring-1 ring-black/5">
+                  <img
+                    src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&q=80"
+                    alt=""
+                    class="h-full w-full object-cover"
+                  />
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-zinc-900">Lina S.</p>
+                  <p class="text-xs text-zinc-500">Brand Designer · Studio Lead</p>
+                </div>
+              </div>
+
+              <div class="mt-8 rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
+                <p class="text-sm font-semibold text-zinc-900">Ready to apply?</p>
+                <p class="mt-2 text-sm text-zinc-600">Takes ~3 minutes. We’ll reply within 1–2 business days.</p>
+                <a
+                  href="apply.html?program=brand-identity"
+                  class="mt-5 inline-flex w-full items-center justify-center rounded-full bg-zinc-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-zinc-800"
+                  >Apply now</a
+                >
+                <a
+                  href="contact.html"
+                  class="mt-3 inline-flex w-full items-center justify-center rounded-full border border-zinc-200 bg-white px-6 py-3 text-sm font-semibold text-zinc-900 shadow-sm transition hover:border-zinc-300"
+                  >Ask a question</a
+                >
+              </div>
+            </div>
+          </aside>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div class="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between reveal" data-reveal>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight max-w-2xl">
+            Ready to make your strongest work yet?
+          </h2>
+          <a
+            href="apply.html?program=brand-identity"
+            class="inline-flex shrink-0 items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-zinc-900 hover:bg-zinc-100"
+            >Apply now</a
+          >
+        </div>
+
+        <div class="mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-3 border-t border-white/10 pt-16 reveal" data-reveal>
+          <div>
+            <h3 class="text-sm font-semibold text-white">Academy</h3>
+            <ul class="mt-4 space-y-3 text-sm text-zinc-400">
+              <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+              <li><a href="courses.html" class="hover:text-white transition">Programs</a></li>
+              <li><a href="blog.html" class="hover:text-white transition">Blog</a></li>
+              <li><a href="gallery.html" class="hover:text-white transition">Gallery</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-white">Support</h3>
+            <ul class="mt-4 space-y-3 text-sm text-zinc-400">
+              <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+              <li><a href="contact.html" class="hover:text-white transition">Help center</a></li>
+              <li><a href="contact.html" class="hover:text-white transition">Terms &amp; privacy</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-white">Follow</h3>
+            <ul class="mt-4 space-y-3 text-sm text-zinc-400">
+              <li><a href="https://instagram.com" class="hover:text-white transition" target="_blank" rel="noreferrer">Instagram</a></li>
+              <li><a href="https://x.com" class="hover:text-white transition" target="_blank" rel="noreferrer">Twitter</a></li>
+              <li><a href="https://youtube.com" class="hover:text-white transition" target="_blank" rel="noreferrer">YouTube</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-16 flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between border-t border-white/10 pt-10 reveal" data-reveal>
+          <a href="index.html" class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-lg font-bold text-white">
+            S
+          </a>
+
+          <div class="hidden lg:block"></div>
+
+          <div class="flex items-center justify-center lg:justify-end gap-3">
+            <a
+              href="https://instagram.com"
+              class="rounded-full border border-white/20 bg-white/5 px-3 py-2 text-xs font-medium text-zinc-200 hover:bg-white/10 transition"
+              target="_blank"
+              rel="noreferrer"
+              >Instagram</a
+            >
+            <a
+              href="https://x.com"
+              class="rounded-full border border-white/20 bg-white/5 px-3 py-2 text-xs font-medium text-zinc-200 hover:bg-white/10 transition"
+              target="_blank"
+              rel="noreferrer"
+              >Twitter</a
+            >
+            <a
+              href="https://youtube.com"
+              class="rounded-full border border-white/20 bg-white/5 px-3 py-2 text-xs font-medium text-zinc-200 hover:bg-white/10 transition"
+              target="_blank"
+              rel="noreferrer"
+              >YouTube</a
+            >
+          </div>
+        </div>
+
+        <p class="mt-10 text-center text-xs text-zinc-500">
+          © <span id="y"></span> Swang Creative Academy. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (!prefersReducedMotion) {
+        const els = document.querySelectorAll("[data-reveal]");
+        const io = new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("reveal--visible");
+                io.unobserve(entry.target);
+              }
+            }
+          },
+          { threshold: 0.12 }
+        );
+        els.forEach((el) => io.observe(el));
+      } else {
+        document.querySelectorAll(".reveal").forEach((el) => el.classList.add("reveal--visible"));
+      }
+      (function () {
+        var btn = document.getElementById("nav-toggle");
+        var menu = document.getElementById("mobile-nav");
+        if (!btn || !menu) return;
+        function setOpen(open) {
+          menu.classList.toggle("hidden", !open);
+          btn.setAttribute("aria-expanded", open ? "true" : "false");
+          btn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        }
+        btn.addEventListener("click", function () {
+          setOpen(menu.classList.contains("hidden"));
+        });
+        menu.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            setOpen(false);
+          });
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && !menu.classList.contains("hidden")) setOpen(false);
+        });
+      })();
+    </script>
+  </body>
+</html>
