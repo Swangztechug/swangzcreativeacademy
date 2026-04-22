@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Suspense } from "react";
 import { ApplyForm } from "@/components/ApplyForm";
 import { ApplyHeading } from "@/components/ApplyHeading";
@@ -58,19 +59,19 @@ export default function ApplyPage() {
                 <h3 className="text-lg font-bold text-zinc-900">What happens next</h3>
                 <ol className="mt-4 list-inside list-decimal space-y-3 text-sm text-zinc-600">
                   <li>We review your goals and availability.</li>
-                  <li>We recommend a course (or confirm your selection).</li>
-                  <li>You get next steps + schedule options.</li>
+                  <li>We confirm your course and payment reference.</li>
+                  <li>You get receipt + schedule options.</li>
                 </ol>
 
                 <div className="mt-10 rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
                   <p className="text-sm font-semibold text-zinc-900">Not sure which course?</p>
                   <p className="mt-2 text-sm text-zinc-600">Apply anyway—we’ll place you in the best fit.</p>
-                  <a
+                  <Link
                     href="/courses"
                     className="mt-5 inline-flex w-full items-center justify-center rounded-full border border-zinc-200 bg-white px-6 py-3 text-sm font-semibold text-zinc-900 shadow-sm hover:border-zinc-300"
                   >
                     View courses
-                  </a>
+                  </Link>
                 </div>
               </div>
             </aside>

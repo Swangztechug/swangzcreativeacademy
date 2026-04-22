@@ -77,7 +77,7 @@ export function HeroCarousel() {
       role="region"
       aria-roledescription="carousel"
       aria-labelledby={labelId}
-      className="relative flex min-h-[100svh] flex-col overflow-hidden bg-zinc-900 outline-none ring-inset focus-visible:ring-2 focus-visible:ring-white/40"
+      className="relative flex min-h-[100dvh] flex-col overflow-hidden bg-zinc-900 outline-none ring-inset focus-visible:ring-2 focus-visible:ring-white/40"
     >
       <div className="absolute inset-0" aria-hidden>
         {SLIDES.map((s, i) => (
@@ -92,17 +92,17 @@ export function HeroCarousel() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/[0.72]" />
       </div>
 
-      <div className="relative z-10 flex min-h-[100svh] flex-col">
+      <div className="relative z-10 flex min-h-[100dvh] flex-col">
         <div className="container mx-auto px-4 pt-6 sm:px-6 lg:px-8">
           <SiteHeader variant="home" />
         </div>
 
-        <div className="container mx-auto flex flex-1 flex-col justify-end px-4 pb-12 sm:px-6 sm:pb-16 lg:px-8 lg:pb-20">
-          <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+        <div className="container mx-auto flex flex-1 flex-col justify-end px-4 pb-8 sm:px-6 sm:pb-14 lg:px-8 lg:pb-20">
+          <div className="flex flex-col gap-6 sm:gap-8 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-2xl" key={slide.id}>
               <h1
                 id={labelId}
-                className="float-in text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl"
+                className="float-in text-3xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl"
                 style={{ animationDelay: "120ms" }}
               >
                 {slide.title}
@@ -128,11 +128,8 @@ export function HeroCarousel() {
             </div>
           </div>
 
-          <div
-            className="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-white/15 pt-6 sm:mt-12"
-            role="group"
-            aria-label="Carousel controls"
-          >
+          <div className="mt-6 border-t border-white/15 pt-5 sm:mt-10 sm:pt-6" role="group" aria-label="Carousel controls">
+            <div className="flex flex-wrap items-center justify-between gap-4">
             <div className="flex items-center gap-2">
               <button
                 type="button"
@@ -173,6 +170,7 @@ export function HeroCarousel() {
               <span className="sr-only">Slide </span>
               {index + 1} / {SLIDES.length}
             </p>
+            </div>
           </div>
         </div>
       </div>

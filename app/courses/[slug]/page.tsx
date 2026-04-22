@@ -49,7 +49,7 @@ export default async function CourseDetailPage({ params }: Props) {
               href={`/apply?course=${encodeURIComponent(course.applyParam)}`}
               className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-zinc-900 hover:bg-zinc-100"
             >
-              Apply now
+              Apply &amp; pay
             </Link>
             <Link
               href="#syllabus"
@@ -147,7 +147,7 @@ export default async function CourseDetailPage({ params }: Props) {
                     href={`/apply?course=${encodeURIComponent(course.applyParam)}`}
                     className="mt-5 inline-flex w-full items-center justify-center rounded-full bg-zinc-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-zinc-800"
                   >
-                    Apply now
+                    Apply &amp; pay
                   </Link>
                   <Link
                     href="/contact"

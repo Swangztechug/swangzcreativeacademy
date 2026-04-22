@@ -1,16 +1,15 @@
 export type CourseSlug = "brand" | "motion" | "photo";
 
-export const COURSES: Record<
-  CourseSlug,
-  {
-    title: string;
-    tagline: string;
-    applyParam: string;
-    heroImage: string;
-    price: string;
-    weeks: string;
-  }
-> = {
+export type CourseInfo = {
+  title: string;
+  tagline: string;
+  applyParam: string;
+  heroImage: string;
+  price: string;
+  weeks: string;
+};
+
+export const COURSES: Record<CourseSlug, CourseInfo> = {
   brand: {
     title: "Brand & Identity Design",
     tagline:
@@ -42,3 +41,11 @@ export const COURSES: Record<
 };
 
 export const COURSE_SLUGS = Object.keys(COURSES) as CourseSlug[];
+
+export const COURSES_BY_APPLY_PARAM: Record<string, CourseInfo> = Object.values(COURSES).reduce(
+  (acc, course) => {
+    acc[course.applyParam] = course;
+    return acc;
+  },
+  {} as Record<string, CourseInfo>
+);

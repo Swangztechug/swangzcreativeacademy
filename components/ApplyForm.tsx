@@ -3,11 +3,15 @@
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import { COURSES_BY_APPLY_PARAM } from "@/lib/courses";
 
 export function ApplyForm() {
   const searchParams = useSearchParams();
   const courseParam =
     searchParams.get("course") ?? searchParams.get("program") ?? "";
+  const selectedCourse = courseParam ? COURSES_BY_APPLY_PARAM[courseParam] : null;
+  const selectedCourseTitle = selectedCourse?.title ?? "General application";
+  const selectedCoursePrice = selectedCourse?.price ?? "Custom quote";
   const [success, setSuccess] = useState(false);
 
   useEffect(() => {
@@ -49,6 +53,69 @@ export function ApplyForm() {
         }}
       >
         <input type="hidden" name="course" value={courseParam} readOnly />
+
+        <div className="rounded-3xl border border-zinc-200 bg-slate-50 p-5 sm:p-6">
+          <p className="text-xs font-semibold uppercase tracking-widest text-zinc-500">Course & payment</p>
+          <div className="mt-4 grid gap-5 sm:grid-cols-2">
+            <div>
+              <label htmlFor="selectedCourse" className="text-sm font-medium text-zinc-900">
+                Selected course
+              </label>
+              <input
+                id="selectedCourse"
+                name="selectedCourse"
+                type="text"
+                value={selectedCourseTitle}
+                readOnly
+                className="mt-2 w-full rounded-2xl border border-zinc-200 bg-white px-4 py-3 text-sm text-zinc-900 shadow-sm"
+              />
+            </div>
+            <div>
+              <label htmlFor="fee" className="text-sm font-medium text-zinc-900">
+                Course fee
+              </label>
+              <input
+                id="fee"
+                name="fee"
+                type="text"
+                value={selectedCoursePrice}
+                readOnly
+                className="mt-2 w-full rounded-2xl border border-zinc-200 bg-white px-4 py-3 text-sm font-semibold text-zinc-900 shadow-sm"
+              />
+            </div>
+          </div>
+          <div className="mt-5 grid gap-5 sm:grid-cols-2">
+            <div>
+              <label htmlFor="paymentMethod" className="text-sm font-medium text-zinc-900">
+                Payment method
+              </label>
+              <select
+                id="paymentMethod"
+                name="paymentMethod"
+                required
+                className="mt-2 w-full rounded-2xl border border-zinc-200 bg-white px-4 py-3 text-sm text-zinc-900 shadow-sm outline-none focus:border-zinc-400"
+              >
+                <option value="">Select method</option>
+                <option>Mobile money</option>
+                <option>Bank transfer</option>
+                <option>Card payment</option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor="paymentReference" className="text-sm font-medium text-zinc-900">
+                Payment reference
+              </label>
+              <input
+                id="paymentReference"
+                name="paymentReference"
+                type="text"
+                required
+                placeholder="Transaction ID / receipt no."
+                className="mt-2 w-full rounded-2xl border border-zinc-200 bg-white px-4 py-3 text-sm text-zinc-900 shadow-sm outline-none placeholder:text-zinc-400 focus:border-zinc-400"
+              />
+            </div>
+          </div>
+        </div>
 
         <div className="grid gap-5 sm:grid-cols-2">
           <div>
