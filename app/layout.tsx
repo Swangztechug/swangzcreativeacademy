@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { FloatingWhatsAppButton } from "@/components/FloatingWhatsAppButton";
 import { RevealInit } from "@/components/RevealInit";
 import { SiteFooter } from "@/components/SiteFooter";
 import "./globals.css";
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       </head>
       <body suppressHydrationWarning className={`${inter.className} bg-white text-zinc-900 antialiased`}>
         {children}
+        <FloatingWhatsAppButton />
         <SiteFooter />
         <RevealInit />
       </body>

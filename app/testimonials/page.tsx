@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { InnerHero } from "@/components/InnerHero";
 
 const heroBg =
@@ -29,80 +28,59 @@ export default function TestimonialsPage() {
 
       <main className="bg-white py-20 sm:py-28">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <section className="reveal rounded-3xl bg-slate-50 p-8 sm:p-12" data-reveal>
-            <p className="text-center text-xs font-semibold uppercase tracking-widest text-zinc-500">Featured</p>
+          <section className="reveal rounded-3xl border border-zinc-200 bg-slate-50 p-8 sm:p-12" data-reveal>
+            <p className="text-center text-xs font-semibold uppercase tracking-widest text-zinc-500">Featured story</p>
             <blockquote className="mx-auto mt-8 max-w-4xl text-center">
               <p className="text-2xl font-bold leading-snug tracking-tight text-zinc-900 sm:text-3xl lg:text-4xl">
-                The structure made all the difference. I stopped “watching tutorials” and started building—week after week.
-                <span className="mt-4 block text-xl font-semibold text-zinc-400 sm:text-2xl lg:text-3xl">
-                  I landed interviews within a month of finishing.
-                </span>
+                The structure made all the difference. I stopped watching tutorials and started shipping real work each week.
+              </p>
+              <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-zinc-600 sm:text-lg">
+                By the end, I had a portfolio case study with clear process and outcomes, and started getting interviews within a month.
               </p>
             </blockquote>
-            <div className="mt-12 flex items-center justify-center gap-4 sm:gap-6">
-              <div className="h-14 w-14 overflow-hidden rounded-2xl grayscale opacity-70 sm:h-16 sm:w-16">
+            <div className="mt-10 flex items-center justify-center gap-4">
+              <div className="h-16 w-16 overflow-hidden rounded-2xl shadow-md ring-4 ring-white sm:h-20 sm:w-20">
                 <Image
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
-                  alt=""
-                  width={64}
-                  height={64}
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80"
+                  alt="Sarah Mitchell portrait"
+                  width={96}
+                  height={96}
                   className="h-full w-full object-cover"
                 />
               </div>
-              <div className="flex flex-col items-center">
-                <div className="h-20 w-20 overflow-hidden rounded-2xl shadow-lg ring-4 ring-white sm:h-24 sm:w-24">
-                  <Image
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80"
-                    alt=""
-                    width={96}
-                    height={96}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <p className="mt-4 text-sm font-semibold text-zinc-900">Sarah Mitchell</p>
+              <div>
+                <p className="text-sm font-semibold text-zinc-900">Sarah Mitchell</p>
                 <p className="text-xs text-zinc-500">Product Designer, Berlin</p>
-              </div>
-              <div className="h-14 w-14 overflow-hidden rounded-2xl grayscale opacity-70 sm:h-16 sm:w-16">
-                <Image
-                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80"
-                  alt=""
-                  width={64}
-                  height={64}
-                  className="h-full w-full object-cover"
-                />
               </div>
             </div>
           </section>
 
           <section className="mt-12 reveal sm:mt-14" data-reveal>
-            <div className="grid gap-6 sm:grid-cols-3">
+            <div className="grid gap-6 md:grid-cols-3">
               {[
-                { k: "Momentum", v: "+4", d: "Projects shipped on average per course." },
-                { k: "Clarity", v: "Weekly", d: "Critique sessions + next-step guidance." },
-                { k: "Confidence", v: "Stronger", d: "Case studies that tell the story behind the work." },
-              ].map((x) => (
-                <div key={x.k} className="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm">
-                  <p className="text-xs font-semibold uppercase tracking-widest text-zinc-500">{x.k}</p>
-                  <p className="mt-3 text-3xl font-bold tracking-tight text-zinc-900">{x.v}</p>
-                  <p className="mt-2 text-sm text-zinc-600">{x.d}</p>
-                </div>
+                {
+                  name: "David A.",
+                  role: "Brand Designer",
+                  quote: "The weekly critique made my work sharper fast. I could see what to improve every single week.",
+                },
+                {
+                  name: "Lina K.",
+                  role: "Motion Designer",
+                  quote: "I finally finished projects instead of collecting unfinished ideas. The pace and accountability worked.",
+                },
+                {
+                  name: "Joel M.",
+                  role: "Visual Storyteller",
+                  quote: "The mentors pushed my thinking and helped me present my process clearly to clients and hiring teams.",
+                },
+              ].map((t) => (
+                <article key={t.name} className="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm">
+                  <p className="text-3xl leading-none text-zinc-300">&ldquo;</p>
+                  <p className="mt-3 text-sm leading-relaxed text-zinc-700">{t.quote}</p>
+                  <p className="mt-6 text-sm font-semibold text-zinc-900">{t.name}</p>
+                  <p className="text-xs text-zinc-500">{t.role}</p>
+                </article>
               ))}
-            </div>
-          </section>
-
-          <section className="mt-16 reveal sm:mt-20" data-reveal>
-            <div className="rounded-3xl bg-zinc-900 p-8 text-white sm:p-12">
-              <p className="text-xs font-semibold uppercase tracking-widest text-white/70">Next step</p>
-              <h3 className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">See if a course fits your goals</h3>
-              <p className="mt-3 max-w-xl leading-relaxed text-white/80">
-                Browse tracks, compare outcomes, and apply when you’re ready—we’ll help you choose.
-              </p>
-              <Link
-                href="/courses"
-                className="mt-8 inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-zinc-900 hover:bg-zinc-100"
-              >
-                Browse courses
-              </Link>
             </div>
           </section>
         </div>

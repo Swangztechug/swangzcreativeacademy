@@ -93,61 +93,6 @@ export default function BlogPage() {
             </div>
           </section>
 
-          <section className="mt-16 reveal sm:mt-20" data-reveal>
-            <div className="grid gap-6 lg:grid-cols-12 lg:items-start">
-              <div className="rounded-3xl border border-zinc-200 bg-white p-8 shadow-sm sm:p-10 lg:col-span-7">
-                <p className="text-xs font-semibold uppercase tracking-widest text-zinc-500">Featured</p>
-                <h3 className="mt-3 text-2xl font-bold tracking-tight text-zinc-900 sm:text-3xl">
-                  A simple weekly practice that compounds
-                </h3>
-                <p className="mt-3 leading-relaxed text-zinc-600">
-                  The fastest growth comes from tight feedback loops. Here’s a 45‑minute weekly routine to sharpen taste
-                  and ship work consistently.
-                </p>
-                <Link
-                  href="/blog/daily-habit"
-                  className="mt-8 inline-flex items-center gap-2 rounded-full bg-zinc-900 px-6 py-3 text-sm font-medium text-white transition hover:bg-zinc-800"
-                >
-                  Read the full post
-                  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </Link>
-              </div>
-              <aside className="lg:col-span-5 lg:pl-2">
-                <div className="rounded-3xl bg-slate-50 p-8 sm:p-10">
-                  <p className="text-xs font-semibold uppercase tracking-widest text-zinc-500">Topics</p>
-                  <h3 className="mt-3 text-2xl font-bold tracking-tight text-zinc-900">Browse by category</h3>
-                  <div className="mt-6 flex flex-wrap gap-2">
-                    <Link
-                      href="/blog/daily-habit"
-                      className="rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm text-zinc-900 shadow-sm hover:border-zinc-300"
-                    >
-                      Study habits
-                    </Link>
-                    <Link
-                      href="/blog/portfolio"
-                      className="rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm text-zinc-900 shadow-sm hover:border-zinc-300"
-                    >
-                      Portfolio
-                    </Link>
-                    <Link
-                      href="/blog/critique"
-                      className="rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm text-zinc-900 shadow-sm hover:border-zinc-300"
-                    >
-                      Critique
-                    </Link>
-                    <Link
-                      href="/courses"
-                      className="rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm text-zinc-900 shadow-sm hover:border-zinc-300"
-                    >
-                      Courses
-                    </Link>
-                  </div>
-                </div>
-              </aside>
-            </div>
-          </section>
         </div>
       </main>
     </>

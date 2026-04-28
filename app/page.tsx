@@ -22,14 +22,6 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="mt-12 flex items-center gap-3">
-            <div className="h-1 max-w-xs flex-1 overflow-hidden rounded-full bg-zinc-200">
-              <div className="relative h-full w-2/5 rounded-full bg-zinc-900">
-                <span className="absolute right-0 top-1/2 h-3 w-3 -translate-y-1/2 translate-x-1/2 rounded-full bg-zinc-900 ring-4 ring-white" />
-              </div>
-            </div>
-          </div>
-
           <div className="mt-10 grid gap-6 md:grid-cols-3 md:items-start">
             <article className="flex flex-col">
               <Link href="/courses/brand" className="block">
@@ -227,6 +219,30 @@ export default function HomePage() {
                 height={64}
                 className="h-full w-full object-cover"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="reveal bg-slate-50 py-24 sm:py-32" data-reveal>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl rounded-3xl border border-zinc-200 bg-white p-8 shadow-sm sm:p-10">
+            <p className="text-xs font-semibold uppercase tracking-widest text-zinc-500">FAQ</p>
+            <h3 className="mt-3 text-2xl font-bold tracking-tight text-zinc-900 sm:text-3xl">Common questions</h3>
+            <div className="mt-8 space-y-4">
+              {[
+                { q: "Do I need prior experience?", a: "No—each course includes warm-ups and foundations, then ramps into projects." },
+                { q: "How much time should I plan weekly?", a: "Most students do 5–7 hours/week. You’ll get a weekly plan you can follow." },
+                { q: "What do I submit in the application?", a: "Your goals, availability, and (optional) portfolio link. That’s it." },
+              ].map((f) => (
+                <details key={f.q} className="group rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4">
+                    <span className="font-semibold text-zinc-900">{f.q}</span>
+                    <span className="text-zinc-500 transition group-open:rotate-180">▾</span>
+                  </summary>
+                  <p className="mt-4 text-sm text-zinc-600">{f.a}</p>
+                </details>
+              ))}
             </div>
           </div>
         </div>
